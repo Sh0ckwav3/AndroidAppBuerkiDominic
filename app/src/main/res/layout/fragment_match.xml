@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.Match">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <FrameLayout
+        android:id="@+id/match_user_img_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintEnd_toStartOf="@+id/right_guide"
+        app:layout_constraintStart_toStartOf="@+id/left_guide"
+        app:layout_constraintTop_toTopOf="@+id/top_guide"
+        app:layout_constraintBottom_toTopOf="@id/match_name"
+        app:layout_constraintDimensionRatio="1:1">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_margin="16dp"
+            android:id="@+id/user_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_person_foreground"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/match_name"
+        android:layout_width="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        tools:text=""
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/match_info_container"
+        app:layout_constraintStart_toEndOf="@id/left_guide"
+        app:layout_constraintEnd_toStartOf="@id/right_guide"
+        app:layout_constraintTop_toBottomOf="@id/match_user_img_container"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/match_info_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/dislike"
+        app:layout_constraintEnd_toStartOf="@id/right_guide"
+        app:layout_constraintStart_toEndOf="@id/left_guide"
+        app:layout_constraintTop_toBottomOf="@id/match_name">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/match_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="City" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/match_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/match_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Age" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/match_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/match_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Nickname" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/match_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/dislike"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_sentiment_very_dissatisfied_black_50dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/like"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_whatshot_black_50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

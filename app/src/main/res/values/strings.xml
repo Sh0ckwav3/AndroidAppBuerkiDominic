@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Domi_Project</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Garbage App</string>
+    <string name="nav_header_subtitle">garbage@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- Match -->
+    <string name="match_city">City</string>
+    <string name="match_age">Age</string>
+    <string name="match_nickname">Nickname</string>
+    <string name="menu_home">Match</string>
+    <string name="menu_matchList">MatchList</string>
+
+</resources>
