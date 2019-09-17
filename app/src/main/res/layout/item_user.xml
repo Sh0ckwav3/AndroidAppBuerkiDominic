@@ -18,7 +18,7 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/user_name"
-        tools:text="Hans Mueller"
+        tools:text="Mister / Mrs X"
         app:layout_constraintStart_toEndOf="@id/user_img"
         app:layout_constraintEnd_toStartOf="@id/liked"
         app:layout_constraintBottom_toBottomOf="parent"

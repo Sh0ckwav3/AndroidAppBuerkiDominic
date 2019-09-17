@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.item_user.view.*
 
 class UserAdapter(private val callback: AdapterCallback): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    //A generic ordered collection of elements that supports adding and removing elements.
     private var data = mutableListOf<User>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -22,21 +23,6 @@ class UserAdapter(private val callback: AdapterCallback): RecyclerView.Adapter<R
     fun setData(data: MutableList<User>) {
         this.data = data
         notifyDataSetChanged()
-    }
-
-    fun addData(item: User) {
-        data.add(item)
-        notifyItemInserted(data.size -1)
-    }
-
-    fun clearData() {
-        data.clear()
-        notifyDataSetChanged()
-    }
-
-    fun removeItem(index: Int) {
-        data.removeAt(index)
-        notifyItemRemoved(index)
     }
 
     override fun getItemCount(): Int {
@@ -76,9 +62,6 @@ class UserAdapter(private val callback: AdapterCallback): RecyclerView.Adapter<R
 
     interface AdapterCallback {
 
-        /**
-         * This is the callback for the adapter click
-         */
         fun onItemClicked(user:User, position:Int)
 
     }
