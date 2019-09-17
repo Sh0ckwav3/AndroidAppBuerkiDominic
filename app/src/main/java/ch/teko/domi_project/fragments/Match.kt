@@ -44,8 +44,8 @@ class Match : Fragment() {
 
                 override fun onFailure(call: Call<UserApiRequest>, t: Throwable) {
                     //add an error toast
-                    Toast.makeText(getActivity(), "An Error Occurred! Pls refresh Page!",
-                        Toast.LENGTH_LONG).show()
+                    Toast.makeText(getActivity(), "An Error Occurred! Pls refresh Page!", Toast.LENGTH_LONG).show()
+                    getRandomUser()//not that smart but meh
                 }
 
 
