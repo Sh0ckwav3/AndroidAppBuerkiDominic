@@ -1,5 +1,10 @@
 # AndroidApp Dominic Bürki
-Mini Tinder, Like or Dislike, See Likes in list
+- Mini Tinder App
+- Use https://randomuser.me/ API
+- Like or Dislike
+- See Likes in list
+
+<a href="https://drive.google.com/file/d/1nJ3bzlxwYYdpSqf5RqqYrIySivN2SCfA/view?usp=sharing" download="Domi_Project.apk">APK Download from Google Drive</a>
 
 # Wireframe
 <p align="center">
